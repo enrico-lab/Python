@@ -1,5 +1,5 @@
 import random
-num = random.randint(1,100)
+number = random.randint(1,100)
 
 print('guess what number has been chosed by the computer! Pick a number from 1 to 100 included')
 
@@ -12,20 +12,20 @@ while True:
         print('OUT OF BOUNDS!! Try again:')
         continue
 
-    if guess == num:
+    if guess == number:
         print(f'CONGRATULATIONS, YOU GUESSED IT IN ONLY {len(guesses)} GUESSES!!')
         break
 
     guesses.append(guess)
 
     if guesses[-2]:
-        if abs(num-guess) < abs(num-guesses[-2]):
+        if abs(number-guess) < abs(number-guesses[-2]):
             print('WARMER!')
         else:
             print('COLDER!')
 
     else:
-        if abs(num-guess) <= 10:
+        if abs(number-guess) <= 10:
             print('WARM!')
         else:
             print('COLD!')
