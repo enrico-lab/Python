@@ -1,14 +1,13 @@
-def list_even(num_list):
+#from Ipython.display import clear_output
 
-  even_numbers = []
-
-  for num in num_list:
-    if num % 2 == 0:
-      even_numbers.append(num)
-    else:
-      pass
-
-  return even_numbers
+def display_board(board):
+  print(board[7]+'|'+board[8]+'|'+board[9])
+  print(' '+'|'+' '+'|'+' ')
+  print('------')
+  print(board[4]+'|'+board[5]+'|'+board[6])
+  print('------')
+  print(board[1]+'|'+board[2]+'|'+board[3])
 
 
-list_even([2,4,6,5,7,8,9])
+test_board = ['#','X','O','X','O','X','O','X','O','X']
+display_board(test_board)
