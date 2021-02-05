@@ -4,8 +4,6 @@ from textblob import TextBlob
 
 search = True
 
-d = enchant.Dict("en_US")
-
 con = mysql.connector.connect(
 user = "ardit700_student",
 password = "ardit700_student",
@@ -19,18 +17,17 @@ def definition(word):
     query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = '%s' " % word )
     results = cursor.fetchall()
 
-    word = word.lower()
     if results:
         for word in results:
             print(word[1])
 
 while True:
     user_input = input('Insert a word: ')
+    user_input = user_input.lower()
     d = enchant.Dict("en_US")
 
     if d.check(user_input) == True:
-        word = user_input
-        definition(word)
+        definition(user_input)
 
     if d.check(user_input) == False:
         checked = TextBlob(user_input)
