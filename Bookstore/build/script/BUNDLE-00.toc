@@ -1,0 +1,3 @@
+([('script',
+   '/Users/enricofavaro/code/enrico-lab/Python/Bookstore/dist/script',
+   'EXECUTABLE')],)
